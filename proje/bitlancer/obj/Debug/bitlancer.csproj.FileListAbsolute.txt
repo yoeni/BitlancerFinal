@@ -1,0 +1,71 @@
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\bin\Debug\bitlancer.exe.config
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\bin\Debug\bitlancer.exe
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\bin\Debug\bitlancer.pdb
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\obj\Debug\bitlancer.csprojAssemblyReference.cache
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\obj\Debug\bitlancer.loginForm.resources
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\obj\Debug\bitlancer.Properties.Resources.resources
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\obj\Debug\bitlancer.csproj.GenerateResource.cache
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\obj\Debug\bitlancer.csproj.CoreCompileInputs.cache
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\obj\Debug\bitlancer.exe
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\obj\Debug\bitlancer.pdb
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\bin\Debug\MySql.Data.dll
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\bin\Debug\MySql.Data.xml
+C:\Users\sezer\Desktop\ödev\2.sınıf\yazılım yapımı Üst ders\bitlancer\bitlancer\obj\Debug\bitlancer.csproj.CopyComplete
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csprojAssemblyReference.cache
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.loginForm.resources
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.main_form.resources
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.Properties.Resources.resources
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csproj.GenerateResource.cache
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csproj.CoreCompileInputs.cache
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.exe
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.pdb
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\bitlancer.exe.config
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\bitlancer.exe
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\bitlancer.pdb
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\MySql.Data.dll
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\MySql.Data.xml
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csproj.CopyComplete
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.orderForm.resources
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csprojAssemblyReference.cache
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.loginForm.resources
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.main_form.resources
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.orderForm.resources
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.Properties.Resources.resources
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csproj.GenerateResource.cache
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csproj.CoreCompileInputs.cache
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.exe
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.pdb
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\bin\Debug\bitlancer.exe.config
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\bin\Debug\bitlancer.exe
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\bin\Debug\bitlancer.pdb
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\bin\Debug\MySql.Data.xml
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csproj.CopyComplete
+C:\Users\simge\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.FrmKullaniciKayit.resources
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.FrmKullaniciKayit.resources
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.userForm.resources
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\bin\Debug\bitlancer.exe.config
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\bin\Debug\bitlancer.exe
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\bin\Debug\bitlancer.pdb
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\bin\Debug\MySql.Data.xml
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csprojAssemblyReference.cache
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.adminOnay.resources
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.loginForm.resources
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.FrmKullaniciKayit.resources
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.main_form.resources
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.orderForm.resources
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.Properties.Resources.resources
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.userForm.resources
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csproj.GenerateResource.cache
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csproj.CoreCompileInputs.cache
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.csproj.CopyComplete
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.exe
+C:\Users\enesk\OneDrive\Documents\GitHub\bitlancer\proje\bitlancer\obj\Debug\bitlancer.pdb
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.adminOnay.resources
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.Transfer.resources
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\ClosedXML.dll
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\DocumentFormat.OpenXml.dll
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\ExcelNumberFormat.dll
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\ClosedXML.pdb
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\ClosedXML.xml
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\DocumentFormat.OpenXml.xml
+E:\projects\bitlancer\proje\bitlancer\bin\Debug\ExcelNumberFormat.xml
