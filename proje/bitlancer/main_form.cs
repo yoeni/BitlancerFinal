@@ -140,7 +140,7 @@ namespace bitlancer
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 && Convert.ToInt32(urunlerDatagrid[1, e.RowIndex].Value)!=4)
             {
-                orderForm order = new orderForm(bitlancer.orderTypes.sell, userID, Convert.ToInt32(urunlerDatagrid[1, e.RowIndex].Value),true);
+                orderForm order = new orderForm(bitlancer.orderTypes.sell, userID, Convert.ToInt32(urunlerDatagrid[1, e.RowIndex].Value));
                 order.ShowDialog();
             }
         }
@@ -178,6 +178,11 @@ namespace bitlancer
                     }
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void userInfoButton_Click(object sender, EventArgs e)

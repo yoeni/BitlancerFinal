@@ -16,14 +16,12 @@ namespace bitlancer
         item myItem;
         int itemID=0,userID=0;
         bitlancer.orderTypes islem;
-        bool own = false;
         int x = 0;
-        public orderForm(bitlancer.orderTypes islem,int userID,int itemID,bool own=false)
+        public orderForm(bitlancer.orderTypes islem,int userID,int itemID)
         {
             this.islem = islem;
             this.itemID = itemID;
             this.userID = userID;
-            this.own = own;
             InitializeComponent();
         }
 

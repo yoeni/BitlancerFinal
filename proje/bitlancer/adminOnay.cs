@@ -53,10 +53,13 @@ namespace bitlancer
                         break;
                 }
             }
+            int yatiralacakTutar = (int)(quantity * unit_price);
 
             int itemQuantity = SingletonDB.GetInstance.getId("select quantity from item_user_infos where  selling=0 and (item_id=4 and user_id=" + user_id + ")");
             SingletonDB.GetInstance.uptadeAdminOnayDataGrid(_id, state,description,unit_price);
-            SingletonDB.GetInstance.updateAfterOrder(0, user_id, 4,(int)(itemQuantity + (quantity*unit_price)));
+            SingletonDB.GetInstance.updateAfterOrder(0, user_id, 4,(int)(itemQuantity + (yatiralacakTutar*0.99)));
+            int itemQuantityAdmin = SingletonDB.GetInstance.getId("select quantity from item_user_infos where  selling=0 and (item_id=4 and user_id=3)");
+            SingletonDB.GetInstance.updateAfterOrder(0, 3, 4, (int)(itemQuantityAdmin + (yatiralacakTutar * 0.01)));
             veriReset();
         }
         public double getCurrency(string name)

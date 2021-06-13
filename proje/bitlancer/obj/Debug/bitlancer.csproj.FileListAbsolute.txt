@@ -69,3 +69,4 @@ E:\projects\bitlancer\proje\bitlancer\bin\Debug\ClosedXML.pdb
 E:\projects\bitlancer\proje\bitlancer\bin\Debug\ClosedXML.xml
 E:\projects\bitlancer\proje\bitlancer\bin\Debug\DocumentFormat.OpenXml.xml
 E:\projects\bitlancer\proje\bitlancer\bin\Debug\ExcelNumberFormat.xml
+E:\projects\bitlancer\proje\bitlancer\obj\Debug\bitlancer.orderForm2.resources

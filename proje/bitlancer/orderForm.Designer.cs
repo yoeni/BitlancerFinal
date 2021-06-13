@@ -278,7 +278,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "orderForm";
-            this.Text = "orderForm";
+            this.Text = "S";
             this.Load += new System.EventHandler(this.orderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transferlerDatgrid)).EndInit();

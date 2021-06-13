@@ -20,17 +20,17 @@ namespace bitlancer
         }
         private void Transfer_Load(object sender, EventArgs e)
         {
-            comboBox1.DataSource = SingletonDB.GetInstance.getItemBitlancerBalance();
-            comboBox1.DisplayMember="itemName";
+            comboPara.DataSource = SingletonDB.GetInstance.getItemBitlancer();
+            comboPara.DisplayMember="itemName";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (numericUpDown1.Value!=0)
+            if (quantity.Value!=0)
             {
-                if (SingletonDB.GetInstance.setItemTransfer(userID, ((item)comboBox1.SelectedItem).id, Convert.ToInt32(numericUpDown1.Value)))
+                if (SingletonDB.GetInstance.setItemTransfer(userID, ((item)comboPara.SelectedItem).id, Convert.ToInt32(quantity.Value)))
                 {
-                    MessageBox.Show(numericUpDown1.Value.ToString() + " Adet " + comboBox1.Text + " Yükleme Başarılı");
+                    MessageBox.Show(quantity.Value.ToString() + " Adet " + comboPara.Text + " Yükleme Başarılı");
                 }
             }
             else

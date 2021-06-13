@@ -224,7 +224,7 @@ namespace bitlancer
 			}
 			return myItem;
 		}
-		public List<item> getItemBitlancerBalance()
+		public List<item> getItemBitlancer(int balance=1)
 		{
 			List<item> items=new List<item>();
 			MySqlConnection connection = null;
@@ -233,7 +233,7 @@ namespace bitlancer
 			{
 				connection = getConnection();
 				connection.Open();
-				command = new MySqlCommand("select * from items where balance=1", connection);
+				command = new MySqlCommand("select * from items where balance="+balance, connection);
 				command.Connection = connection;
 				MySqlDataReader read = command.ExecuteReader();
 				while (read.Read())
