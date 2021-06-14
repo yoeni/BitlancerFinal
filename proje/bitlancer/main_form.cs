@@ -101,6 +101,10 @@ namespace bitlancer
             {
                 backgroundWorker1.RunWorkerAsync();
             }
+            if (!checkOrdersWait.IsBusy)
+            {
+                checkOrdersWait.RunWorkerAsync();
+            }
         }
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -180,9 +184,15 @@ namespace bitlancer
             }
         }
 
+        private void checkOrdersWait_DoWork(object sender, DoWorkEventArgs e)
+        {
+            SingletonDB.GetInstance.checkOrderWaits();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-
+            orderForm2 orderForm2 = new orderForm2(userID);
+            orderForm2.ShowDialog();
         }
 
         private void userInfoButton_Click(object sender, EventArgs e)

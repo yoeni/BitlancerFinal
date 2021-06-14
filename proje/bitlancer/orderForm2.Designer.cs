@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.transferlerDatgrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,18 +39,21 @@
             this.unitPriceTextBox = new System.Windows.Forms.TextBox();
             this.quantityTextBox = new System.Windows.Forms.TextBox();
             this.buyButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.waitingOrdersDataGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.transferlerDatgrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.waitingOrdersDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(7, 235);
+            this.label2.Location = new System.Drawing.Point(5, 406);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 31);
+            this.label2.Size = new System.Drawing.Size(270, 31);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Son Emirler:";
+            this.label2.Text = "Gerçekleşen Emirler:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // transferlerDatgrid
@@ -60,17 +64,17 @@
             this.transferlerDatgrid.AllowUserToOrderColumns = true;
             this.transferlerDatgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.transferlerDatgrid.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.transferlerDatgrid.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.transferlerDatgrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.transferlerDatgrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.transferlerDatgrid.GridColor = System.Drawing.Color.Plum;
-            this.transferlerDatgrid.Location = new System.Drawing.Point(7, 266);
+            this.transferlerDatgrid.Location = new System.Drawing.Point(5, 437);
             this.transferlerDatgrid.MultiSelect = false;
             this.transferlerDatgrid.Name = "transferlerDatgrid";
             this.transferlerDatgrid.ReadOnly = true;
@@ -151,11 +155,51 @@
             this.buyButton.UseVisualStyleBackColor = false;
             this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(5, 210);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(315, 31);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Beklemede Olan Emirler:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // waitingOrdersDataGrid
+            // 
+            this.waitingOrdersDataGrid.AllowDrop = true;
+            this.waitingOrdersDataGrid.AllowUserToAddRows = false;
+            this.waitingOrdersDataGrid.AllowUserToDeleteRows = false;
+            this.waitingOrdersDataGrid.AllowUserToOrderColumns = true;
+            this.waitingOrdersDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.waitingOrdersDataGrid.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.waitingOrdersDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.waitingOrdersDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.waitingOrdersDataGrid.GridColor = System.Drawing.Color.Plum;
+            this.waitingOrdersDataGrid.Location = new System.Drawing.Point(5, 241);
+            this.waitingOrdersDataGrid.MultiSelect = false;
+            this.waitingOrdersDataGrid.Name = "waitingOrdersDataGrid";
+            this.waitingOrdersDataGrid.ReadOnly = true;
+            this.waitingOrdersDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.waitingOrdersDataGrid.ShowEditingIcon = false;
+            this.waitingOrdersDataGrid.Size = new System.Drawing.Size(781, 172);
+            this.waitingOrdersDataGrid.TabIndex = 21;
+            // 
             // orderForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 621);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.waitingOrdersDataGrid);
             this.Controls.Add(this.buyButton);
             this.Controls.Add(this.secondLabel);
             this.Controls.Add(this.label4);
@@ -172,6 +216,7 @@
             this.Text = "EMİR VER";
             this.Load += new System.EventHandler(this.orderForm2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.transferlerDatgrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.waitingOrdersDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +233,7 @@
         private System.Windows.Forms.TextBox unitPriceTextBox;
         private System.Windows.Forms.TextBox quantityTextBox;
         private System.Windows.Forms.Button buyButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView waitingOrdersDataGrid;
     }
 }

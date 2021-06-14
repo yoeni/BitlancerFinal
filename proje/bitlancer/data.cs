@@ -451,6 +451,39 @@ namespace bitlancer
 			}
 			return dt;
 		}
+		public DataTable getLastOrdersWait(int id = 0)
+		{
+			DataTable dt = new DataTable();
+			MySqlConnection connection = null;
+			MySqlCommand command = null;
+			try
+			{
+				connection = getConnection();
+				connection.Open();
+				command = new MySqlCommand("select row_number() over(order by id desc) as 'No:',date as 'Tarih:', (select item_name from items where id = o.item_id) as 'Para Birimi:',quantity as 'Miktar:',unit_price as 'Birim Fiyat:' from item_orders_wait o where user_id="+id, connection);
+				dt.Load(command.ExecuteReader());
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e.Message);
+			}
+			finally
+			{
+				if (connection != null)
+				{
+					try
+					{//bağlantıları kapat
+						connection.Close();
+						command.Dispose();
+					}
+					catch (Exception e)
+					{
+						Console.WriteLine(e.Message);
+					}
+				}
+			}
+			return dt;
+		}
 		public DataTable getLastOrderBetwenDate(int id, DateTime date1,DateTime date2)
 		{
 			DataTable dt = new DataTable();
@@ -925,6 +958,90 @@ namespace bitlancer
 				}
 			}
 			return state;
+		}
+		public bool addOrderWait(int userId,int itemId,int quantity,double unitPrice)
+        {
+			bool state = false;
+			MySqlConnection connection = null;
+			MySqlCommand command = null;
+			try
+			{
+				connection = getConnection();
+				connection.Open();
+				command = new MySqlCommand("insert into item_orders_wait(user_id,item_id,quantity,unit_price,date) values (" + userId + "," + itemId + "," + quantity + "," + unitPrice.ToString().Replace(",", ".") + ",'" + DateTime.Now.ToString() + "')", connection);
+				command.ExecuteNonQuery();
+				state = true;
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e.Message);
+				state = false;
+			}
+			finally
+			{
+				if (connection != null)
+				{
+					try
+					{//bağlantıları kapat
+						connection.Close();
+						command.Dispose();
+					}
+					catch (Exception e)
+					{
+						Console.WriteLine(e.Message);
+					}
+				}
+			}
+			return state;
+        }
+		public void updateWaitingOrder(int id)
+        {
+			MySqlConnection connection = null;
+			MySqlCommand command = null;
+			try
+			{
+				connection = getConnection();
+				connection.Open();
+				command = new MySqlCommand("delete from item_orders_wait where id=" + id, connection);
+				command.ExecuteNonQuery();
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e.Message);
+			}
+			finally
+			{
+				if (connection != null)
+				{
+					try
+					{//bağlantıları kapat
+						connection.Close();
+						command.Dispose();
+					}
+					catch (Exception e)
+					{
+						Console.WriteLine(e.Message);
+					}
+				}
+			}
+		}
+		public void checkOrderWaits()
+		{
+			DataTable waitingOrders = GetTable("select * from item_orders_wait");
+            if (waitingOrders.Rows.Count!=0)
+			{
+				foreach (DataRow row in waitingOrders.Rows)
+				{
+					double wantedPrice = Convert.ToDouble(row[4].ToString());
+					double minPrice = getDouble("select min(unit_price) from item_user_infos where user_id!="+ row[1].ToString() + " and (item_id=" + row[2].ToString() + " and selling=1)");
+
+					if (wantedPrice >= minPrice)
+					{
+						manageOrder(int.Parse(row[1].ToString()), int.Parse(row[2].ToString()), int.Parse(row[3].ToString()), bitlancer.orderTypes.buy);
+						updateWaitingOrder(int.Parse(row[0].ToString()));
+					}
+				}
+			}
 		}
 	}
 }

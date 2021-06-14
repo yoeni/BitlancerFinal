@@ -12,7 +12,6 @@ namespace bitlancer
 {
     public partial class orderForm2 : Form
     {
-        DataTable lastOrdersData;
         int userID;
         public orderForm2(int userID)
         {
@@ -28,8 +27,8 @@ namespace bitlancer
         }
         public void reset()
         {
-            lastOrdersData = SingletonDB.GetInstance.getLastOrders(userID, ((item)comboPara.SelectedItem).id);
-            transferlerDatgrid.DataSource = lastOrdersData;
+            transferlerDatgrid.DataSource = SingletonDB.GetInstance.getLastOrders(userID, ((item)comboPara.SelectedItem).id);
+            waitingOrdersDataGrid.DataSource = SingletonDB.GetInstance.getLastOrdersWait(userID);
         }
 
         private void comboPara_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,6 +39,16 @@ namespace bitlancer
         private void buyButton_Click(object sender, EventArgs e)
         {
 
+           bool state= SingletonDB.GetInstance.addOrderWait(userID, ((item)comboPara.SelectedItem).id,int.Parse(quantityTextBox.Text),Convert.ToDouble(unitPriceTextBox.Text.Replace(".",",")));
+            if (state)
+            {
+                MessageBox.Show("Emir Başarıyla Sisteme Girildi!");
+            }
+            else
+            {
+                MessageBox.Show("Emir Giriş Hatası!");
+            }
         }
+
     }
 }
