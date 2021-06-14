@@ -25,7 +25,8 @@ namespace bitlancer
                 {
                     main_form main = new main_form(currentUser);
                     this.Hide();
-                    main.Show();
+                    main.ShowDialog();
+                    this.Close();
                 }
                 else
                 {

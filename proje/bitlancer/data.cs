@@ -348,7 +348,7 @@ namespace bitlancer
 			{
 				connection = getConnection();
 				connection.Open();
-				command = new MySqlCommand("select (row_number() over (order by f.id desc))as 'No:', i.item_name as 'Ürün:',concat(min(f.unit_price),' ₺') as 'Birim Fiyat:',f.quantity as 'Adet:', f.date as 'Tarih:',f.state as 'Durum:',f.description as 'Açıklama:' from items i, item_adds f where  i.id=f.item_id and f.user_id=" + id + " GROUP by f.item_id", connection);
+				command = new MySqlCommand("select (row_number() over (order by f.id desc))as 'No:', i.item_name as 'Para Birimi:',concat(min(f.unit_price),' ₺') as 'Birim Fiyat:',f.quantity as 'Adet:', f.date as 'Tarih:',f.state as 'Durum:',f.description as 'Açıklama:' from items i, item_adds f where  i.id=f.item_id and f.user_id=" + id + " GROUP by f.item_id", connection);
 				dt.Load(command.ExecuteReader());
 			}
 			catch (Exception e)
@@ -427,7 +427,7 @@ namespace bitlancer
 			{
 				connection = getConnection();
 				connection.Open();
-				command = new MySqlCommand("select row_number() over(order by id desc) as 'No:'," + toUserOrder + " order_date as 'Tarih:'," + toAdmin + " (select item_name from items where id = o.item_id) as 'Ürün:',(order_quantity * order_unit_price) as 'Tutar:',(select quantity from item_user_infos where user_id = " + (id!=0?id.ToString():"o.destination_user_id") + " and item_id = 4) as 'Kalan Para:',order_unit_price as 'Birim Fiyat:' from item_orders o " + whereClause, connection);
+				command = new MySqlCommand("select row_number() over(order by id desc) as 'No:'," + toUserOrder + " order_date as 'Tarih:'," + toAdmin + " (select item_name from items where id = o.item_id) as 'Para Birimi:',(order_quantity * order_unit_price) as 'Tutar:',(select quantity from item_user_infos where user_id = " + (id!=0?id.ToString():"o.destination_user_id") + " and item_id = 4) as 'Kalan Para:',order_unit_price as 'Birim Fiyat:' from item_orders o " + whereClause, connection);
 				dt.Load(command.ExecuteReader());
 			}
 			catch (Exception e)
@@ -496,7 +496,7 @@ namespace bitlancer
 			{
 				connection = getConnection();
 				connection.Open();
-				command = new MySqlCommand("select row_number() over(order by id desc) as 'No:', "+toUserOrder+"order_date as 'Tarih:', (select item_name from items where id = o.item_id) as 'Ürün:',order_quantity as 'Miktar:',(order_quantity * order_unit_price) as 'Tutar:',order_unit_price as 'Birim Fiyat:' from item_orders o where (destination_user_id="+id+" or source_user_id="+id+ ") and (DATE(concat(RIGHT(LEFT(order_date,10),4),'-',SUBSTRING(order_date,4,2),'-',LEFT(order_date,2))) BETWEEN CAST('"+dt1+"' as DATE) and CAST('"+dt2+"' as DATE))", connection);
+				command = new MySqlCommand("select row_number() over(order by id desc) as 'No:', "+toUserOrder+"order_date as 'Tarih:', (select item_name from items where id = o.item_id) as 'Para Birimi:',order_quantity as 'Miktar:',(order_quantity * order_unit_price) as 'Tutar:',order_unit_price as 'Birim Fiyat:' from item_orders o where (destination_user_id="+id+" or source_user_id="+id+ ") and (DATE(concat(RIGHT(LEFT(order_date,10),4),'-',SUBSTRING(order_date,4,2),'-',LEFT(order_date,2))) BETWEEN CAST('"+dt1+"' as DATE) and CAST('"+dt2+"' as DATE))", connection);
 				dt.Load(command.ExecuteReader());
 			}
 			catch (Exception e)

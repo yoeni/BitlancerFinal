@@ -16,7 +16,7 @@ namespace bitlancer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new main_form(4));
+            Application.Run(new loginForm());
         }
     }
 }
