@@ -1002,7 +1002,8 @@ namespace bitlancer
 			{
 				connection = getConnection();
 				connection.Open();
-				command = new MySqlCommand("delete from item_orders_wait where id=" + id, connection);
+				string str = "delete from item_orders_wait where id=" + id;
+				command = new MySqlCommand(str, connection);
 				command.ExecuteNonQuery();
 			}
 			catch (Exception e)
@@ -1034,10 +1035,11 @@ namespace bitlancer
 				{
 					double wantedPrice = Convert.ToDouble(row[4].ToString());
 					double minPrice = getDouble("select min(unit_price) from item_user_infos where user_id!="+ row[1].ToString() + " and (item_id=" + row[2].ToString() + " and selling=1)");
-
-					if (wantedPrice >= minPrice)
+					int onSaleQuantity = getId("SELECT quantity FROM item_user_infos where (item_id="+row[2].ToString()+ " and (select sum(quantity) from item_user_infos where item_id=" + row[2].ToString() +" and (user_id!="+row[1].ToString()+ " and selling=1))>=" + row[3].ToString() + ") and (user_id!=" + row[1].ToString() +" and selling=1)");
+					if (wantedPrice >= minPrice&& int.Parse(row[3].ToString())<=onSaleQuantity)
 					{
 						manageOrder(int.Parse(row[1].ToString()), int.Parse(row[2].ToString()), int.Parse(row[3].ToString()), bitlancer.orderTypes.buy);
+						
 						updateWaitingOrder(int.Parse(row[0].ToString()));
 					}
 				}
